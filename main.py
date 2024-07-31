@@ -13,6 +13,16 @@ from typing import Tuple
 
 assert sys.version_info >= (3, 7)
 
+script_directory: str = os.path.dirname(os.path.realpath(__file__))
+bundled_tesseract_path: Path = Path(script_directory, 'tesseract-program')
+if bundled_tesseract_path.is_dir():
+    os.environ["PATH"] += os.pathsep + str(bundled_tesseract_path)
+    print(f"Added bundled tesseract {bundled_tesseract_path} to PATH")
+bundled_ghostscript_path: Path = Path(script_directory, 'ghostscript-program', 'bin')
+if bundled_ghostscript_path.is_dir():
+    os.environ["PATH"] += os.pathsep + str(bundled_ghostscript_path)
+    print(f"Added bundled ghostscript {bundled_ghostscript_path} to PATH")
+
 try:
     from pdfminer.high_level import extract_text
 except ModuleNotFoundError:
