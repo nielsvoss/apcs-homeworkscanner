@@ -3,8 +3,9 @@
 $ghostscriptExecutable = Get-Item $(Get-Command 'gswin64').Source
 $ghostscriptFolder = $ghostscriptExecutable.Directory.Parent.FullName
 $tesseractFolder = "$env:LOCALAPPDATA\Programs\Tesseract-OCR"
-pyinstaller --name 'apcs-scanner' `
+pyinstaller --name 'scanner' `
     --copy-metadata pikepdf --copy-metadata ocrmypdf --collect-submodules ocrmypdf --collect-datas ocrmypdf.data `
     --add-data "$($ghostscriptFolder):ghostscript-program" `
     --add-data "$($tesseractFolder):tesseract-program" `
     main.py
+Copy-Item 'README.md' 'dist/scanner/README.md'
