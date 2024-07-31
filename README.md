@@ -7,7 +7,22 @@ as is the case when the files are submitted on Canvas.
 Python is required. I used Python `3.10.6` to test but it likely works on newer version and probably on some older
 versions as well.
 
-## Installing requirements
+## Easy Installation on Windows - Prepackaged Bundle
+
+There is a prepackaged bundle in the GitHub releases tab.
+It comes with a python interpreter and all the program dependencies, so that you can just run the
+program as an `.exe`.
+
+In the usage guide below, whenever you see `python main.py`, run `./scanner` instead.
+
+I couldn't figure out how to get Jackie's `translate.py` helper script bundled as an `.exe` at the
+same time as the scanner script, so I included it as a `.py` file.
+Since the script just saves time typing stuff into `questions.txt`, it isn't a big deal if you can't
+get it to run.
+But if you are interested, it should be able to run with any python version 3.7 or later, and it
+has no external dependencies, so there isn't anything you need to install with pip.
+
+## Installing requirements manually
 
 It is recommended to make sure `pip` is up-to-date, otherwise installation of more complex packages (i.e. those
 with native code) might fail.
