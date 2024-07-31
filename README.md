@@ -42,8 +42,16 @@ available in `$PATH`. Alternatively, on Windows, you can make sure that the exec
 This is a hard coded path which is supposed to avoid having to add all the random executables located in Tesseract's
 directory to `$PATH`.
 
+Lastly, you need to install [Ghostscript](https://www.ghostscript.com/). This is a requirement for `ocrmypdf`.
+If on Windows, please download the 64-bit Windows Ghostscript installer (GNU Afferno General Public License version)
+from the Ghostscript [downloads page](https://www.ghostscript.com/releases/gsdnld.html).
+After installing the Windows version, you should be able to run `gswin64` from your terminal.
+If it says that command was not found, you probably need to add the Ghostscript installation folder to your `PATH`
+environment variable. (My Ghostscript installation folder was `C:\Program Files\gs\gs10.03.1\bin`).
+
 This script has been tested with `ocrmypdf` version `14.4.0`, `Pillow` version `10.0.0`, and `pytesseract` version
-`0.3.10`. `Tesseract OCR` was tested with version `v5.2.0.20220712`.
+`0.3.10`. `Tesseract OCR` was tested with version `v5.2.0.20220712`, and `Ghostscript` was tested with
+`GPL Ghostscript 10.03.1`.
 
 ## Usage
 
