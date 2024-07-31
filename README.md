@@ -106,6 +106,24 @@ of students and the score they received.
 The difference is that `paired_scores.csv` will contain entries for students that didn't submit anything, which makes
 it easier to paste it into a spreadsheet (since you don't need to match names manually).
 
+The columns in `paired_scores.csv` are as follows:
+- `true_name`: The student's actual name, as specified in `names.txt`
+- `student_name`: The name of the student in the pdf/image file name.
+- `score`: Number of questions answered. The max score is the number of questions you included in `questions.txt`.
+- `missing_questions`: Any questions included in `questions.txt` but the student does not have.
+This will say `MISSING` if the student did not submit a document.
+- `type`: The file type of the student's submission. Will be:
+  - `pdf`: For a pdf that did not require OCR
+  - `image pdf`: For a pdf that required OCR
+  - `image`: For a `.png` or `.jpg` file
+  - `unknown`: An unrecognized file extension. These need to be graded manually.
+  - Blank: If the student did not submit a document.
+
+If using `paired_scores.csv`, please make sure to check the bottom of the spreadsheet for rows starting with `?`.
+These correspond to names that couldn't be found in `names.txt`. If you see rows starting with `?`, please make sure
+to update your `names.txt` to add new names or correct errors.
+Please make sure that `names.txt` matches the names of the Canvas output and that it doesn't contain nicknames.
+
 You can open the file in LibreOffice Calc or Microsoft Excel, or you can upload it to Google Drive and use Google Sheets
 to open the file.
 
