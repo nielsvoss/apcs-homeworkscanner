@@ -88,6 +88,16 @@ Before running, **make sure your working directory is the directory containing t
 Now you can run `python main.py /path/to/submissions/directory`. You can also run this directly on a `.zip` file, in
 which case it will be extracted to a new directory called `temp_extracted_submissions/`.
 
+### Advanced Usage
+
+You can use command line arguments to specify the locations of the student names list, in case you have multiple
+(such as one for each class) or it isn't located at `names.txt`.
+```bash
+python main.py --names other_names_file.txt /path/to/submissions/directory
+```
+
+Please run `python main.py --help` to see all options.
+
 ## Output
 
 This script will produce a `scores.csv` file and, if you created a `names.txt` file, a `paired_scores.csv` file. The
