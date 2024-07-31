@@ -9,3 +9,4 @@ pyinstaller --name 'scanner' `
     --add-data "$($tesseractFolder):tesseract-program" `
     main.py
 Copy-Item 'README.md' 'dist/scanner/README.md'
+Copy-Item 'translate.py' 'dist/scanner/translate.py'
