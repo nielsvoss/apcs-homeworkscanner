@@ -89,3 +89,7 @@ it easier to paste it into a spreadsheet (since you don't need to match names ma
 
 You can open the file in LibreOffice Calc or Microsoft Excel, or you can upload it to Google Drive and use Google Sheets
 to open the file.
+
+## License
+
+Public Domain via CC0
