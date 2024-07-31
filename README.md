@@ -41,6 +41,7 @@ available in `$PATH`. Alternatively, on Windows, you can make sure that the exec
 `C:\Users\yourname\AppData\Local\Tesseract-OCR\tesseract.exe` (in which case it doesn't need to be in `$PATH`).
 This is a hard coded path which is supposed to avoid having to add all the random executables located in Tesseract's
 directory to `$PATH`.
+(Tesseract installers for Windows can be found at https://github.com/UB-Mannheim/tesseract/wiki).
 
 Lastly, you need to install [Ghostscript](https://www.ghostscript.com/). This is a requirement for `ocrmypdf`.
 If on Windows, please download the 64-bit Windows Ghostscript installer (GNU Afferno General Public License version)
