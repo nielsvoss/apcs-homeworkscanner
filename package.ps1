@@ -2,7 +2,7 @@
 # https://github.com/ocrmypdf/OCRmyPDF/issues/659#issuecomment-1517712600
 $ghostscriptExecutable = Get-Item $(Get-Command 'gswin64').Source
 $ghostscriptFolder = $ghostscriptExecutable.Directory.Parent.FullName
-$tesseractFolder = "$env:LOCALAPPDATA\Tesseract-OCR"
+$tesseractFolder = "$env:LOCALAPPDATA\Programs\Tesseract-OCR"
 pyinstaller `
     --copy-metadata pikepdf --copy-metadata ocrmypdf --collect-submodules ocrmypdf --collect-datas ocrmypdf.data `
     --add-data "$($ghostscriptFolder):ghostscript-program" `
